@@ -1,5 +1,6 @@
 import Foundation
 
+@available(iOS 13, macOS 10.15, tvOS 10, *)
 @propertyWrapper
 public class Atomic<T> {
     public var wrappedValue: T {
@@ -15,6 +16,7 @@ public class Atomic<T> {
     }
 }
 
+@available(iOS 13, macOS 10.15, tvOS 10, *)
 private final class Lock {
     private var _lock: UnsafeMutablePointer<os_unfair_lock>
 
